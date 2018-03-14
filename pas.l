@@ -8,9 +8,10 @@ void yyerror(char *);
                 return INTEGER;
             }
 [-+*/\n]    return *yytext;
-ADD         return '+';
-SUBTRACT    return '-';
+PLUS         return '+';
+MINUS       return '-';
 MULTIPLY    return '*';
+TIMES       return '*';
 DIVIDE      return '/';
 [ \t] ;     /* skip whitespace */
 .           yyerror("invalid character");
